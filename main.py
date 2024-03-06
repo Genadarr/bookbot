@@ -4,11 +4,11 @@ def main():
     num_words = get_num_words(text)
     chars_dict = get_chars_dict(text)
     chars_sorted_list = chars_dict_to_sorted_list(chars_dict)
-
+# first project
     print(f"--- Begin report of {book_path} ---")
     print(f"{num_words} words found in the document")
     print()
-
+# isalph() checks is all chars are alphabetic
     for item in chars_sorted_list:
         if not item["char"].isalpha():
             continue
@@ -16,7 +16,7 @@ def main():
 
     print("--- End report ---")
 
-
+# number of wards
 def get_num_words(text):
     words = text.split()
     return len(words)
@@ -25,7 +25,7 @@ def get_num_words(text):
 def sort_on(d):
     return d["num"]
 
-
+# sort the dict based on highest number at the top
 def chars_dict_to_sorted_list(num_chars_dict):
     sorted_list = []
     for ch in num_chars_dict:
